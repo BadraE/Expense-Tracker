@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+    <div class="balance-container">
+      <h2>Your Balance: <span id="balance">0.00</span></h2>
+    </div>
+    <div class="transaction-form">
+      <label for="text">Text</label>
+      <input type="text" id="text" placeholder="Enter text..." />
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" placeholder="Enter amount..." />
+      <label for="category">Category</label>
+      <select id="category">
+        <option value="bills">Bills</option>
+        <option value="groceries">Groceries</option>
+        <option value="shopping">Shopping</option>
+        <option value="transportation">Transportation</option>
+        <option value="other">Other</option>
+      </select>
+      <button onclick="addTransaction()">Add Transaction</button>
+    </div>
+    <div class="transaction-list">
+      <h3>Transaction History</h3>
+      <ul id="transaction-list"></ul>
+    </div>
+    <div class="chart-container">
+      <h3>Spending Distribution</h3>
+      <canvas id="pie-chart"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
